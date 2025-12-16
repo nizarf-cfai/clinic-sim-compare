@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ClinicFlow Sim
 
-# Run and deploy your AI Studio app
+An interactive simulation comparing **Standard** vs. **AI-Enabled** clinic workflows.
 
-This contains everything you need to run your app locally.
+## 🚀 How to Run Locally
 
-View your app in AI Studio: https://ai.studio/apps/drive/19Q9LHz_mf_OBAZY7JqNsR4z1Hp1_CnhE
+This project uses [Vite](https://vitejs.dev/) for fast development.
 
-## Run Locally
+### 1. Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-**Prerequisites:**  Node.js
+### 2. Install Dependencies
+Open your terminal in this folder and run:
+```bash
+npm install
+```
 
+### 3. Start Development Server
+```bash
+npm run dev
+```
+Open your browser to `http://localhost:5173`.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠 Features
+
+- **Real-Time Visualization:** Watch patients move through reception, waiting rooms, and doctor offices.
+- **Configurable Scenarios:** Adjust the number of doctors, receptionists, arrival rates, and digital adoption.
+- **Live Metrics:** Track throughput, waiting times, and resource utilization in real-time.
+- **Comparison:** Side-by-side analysis of manual vs. digital workflows.
