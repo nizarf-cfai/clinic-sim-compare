@@ -3,20 +3,26 @@ export interface SimulationConfig {
   durationMinutes: number;
   avgArrivalInterval: number; // minutes
   
+  // Financial Settings
+  annualNurseSalary: number;
+  annualDoctorSalary: number;
+
   // Standard Clinic Settings
-  numStdReceptionists: number;
-  numStdDoctors: number; // New: Number of Standard Doctors
+  stdTotalNurses: number; // Pool size
+  numStdReceptionists: number; // Active staff (must be <= stdTotalNurses)
+  numStdDoctors: number; 
   stdReceptionTimeAvg: number;
-  standardDoctorTimeAvg: number; // Mode for Triangular
+  standardDoctorTimeAvg: number; 
 
   // AI Clinic Settings
-  digitalAdoptionRate: number; // 0.0 to 1.0
+  digitalAdoptionRate: number; 
+  aiTotalNurses: number; // Pool size
   numKiosks: number;
-  numNurses: number;
-  numAiDoctors: number; // New: Number of AI Doctors
+  numNurses: number; // Active Triage Nurses (must be <= aiTotalNurses)
+  numAiDoctors: number; 
   aiKioskTimeAvg: number;
   aiTriageTimeAvg: number;
-  aiDoctorTimeAvg: number; // Mode for Triangular
+  aiDoctorTimeAvg: number; 
 }
 
 export enum PatientType {

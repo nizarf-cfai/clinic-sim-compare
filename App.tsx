@@ -7,23 +7,29 @@ import { RealtimeEngine } from './services/realtimeEngine';
 import { Menu, Play, Pause, RotateCcw } from 'lucide-react';
 
 const DEFAULT_CONFIG: SimulationConfig = {
-  durationMinutes: 480,
-  avgArrivalInterval: 6,
+  durationMinutes: 480, // 8 hours
+  avgArrivalInterval: 4.5,
   
+  // Salaries (Annual)
+  annualNurseSalary: 70000,
+  annualDoctorSalary: 250000,
+
   // Standard Defaults
-  numStdReceptionists: 2,
+  stdTotalNurses: 3, // Pool size
+  numStdReceptionists: 2, // Active
   numStdDoctors: 1,
-  stdReceptionTimeAvg: 5,
-  standardDoctorTimeAvg: 20,
+  stdReceptionTimeAvg: 13,
+  standardDoctorTimeAvg: 48,
   
   // AI Defaults
   digitalAdoptionRate: 0.5,
+  aiTotalNurses: 3, // Pool size
   numKiosks: 2,
-  aiKioskTimeAvg: 3,
-  numNurses: 3,
+  numNurses: 2, // Active Triage
   numAiDoctors: 1,
-  aiTriageTimeAvg: 5,
-  aiDoctorTimeAvg: 10,
+  aiKioskTimeAvg: 3,
+  aiTriageTimeAvg: 4.5,
+  aiDoctorTimeAvg: 4,
 };
 
 function App() {
